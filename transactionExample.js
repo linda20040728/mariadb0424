@@ -1,10 +1,11 @@
+// transactionExample.jsv
 const pool = require('./db');
  
 async function doTransaction() {
     let conn;
     try {
         conn = await pool.getConnection();
-        await conn.beginTransaction(); 
+        await conn.beginTransaction(); // 開始交易
  
         const studentId = 'S10721002';
         const newDepartmentId = 'BA001';
